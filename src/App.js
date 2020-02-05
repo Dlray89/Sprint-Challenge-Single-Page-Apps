@@ -7,9 +7,11 @@ import Header from "./components/Header.js";
 
 export default function App() {
   return (
-    <main><Header />
-    <Route exact path='/characters' component={WelcomePage} />
-    <Route path='Characters' component={CharacterList} />
-    </main>
+      <>
+    <Header />
+    <Route exact path='/' component={WelcomePage} />
+    <Route path='/characters' component={CharacterList} />
+    </>
+    
   );
 }

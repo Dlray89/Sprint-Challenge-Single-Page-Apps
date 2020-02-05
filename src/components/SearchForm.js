@@ -1,29 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import styled from "styled-components";
 
+
+const StyleForm = styled.section`
+text-align: center;
+
+`
 
 
 export default function SearchForm(props) {
 
-const [searching, setSearching] = useState([]);
 const handlechanges = event => {
-      setSearching(event.target.value);
+      props.setQuery(event.target.value);
   }
 
-
-  const submittingHandler = e =>{
-      e.preventDefault();
-  }
-
-  const characherSearch = props.charachers.filers( character => {
-      return character.toLowerCase().indexOf(searching.toLowerCase()) !==1;
-  })
-  props.searchData(characherSearch);
-  console.log(characherSearch);
+  
 
   return (
 
-    <section className="search-form">
-     <form onSubmit={submittingHandler}>
+    <StyleForm className="search-form">
+     <form>
          <input 
          onChange={handlechanges}
          type="text"
@@ -31,6 +27,6 @@ const handlechanges = event => {
          placeholders="Search"
          />
      </form>
-    </section>
+    </StyleForm>
   );
 }
