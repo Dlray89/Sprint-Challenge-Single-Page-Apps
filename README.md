@@ -28,6 +28,9 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [ ]  Explain benefit(s) using `client-side routing`?
 
 > Answer:
+One benefit is when a user clicks on a link the URL changes but any requests to the serve isn't made. Everything happens internally, less data is processed
+and there is a smooth transition between views that are easier to implement.
+
 
 ## Project Set Up
 

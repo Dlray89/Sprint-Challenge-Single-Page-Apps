@@ -1,10 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
+import styled from "styled-components";
 
-export default function SearchForm() {
- 
+
+const StyleForm = styled.section`
+text-align: center;
+
+`
+
+
+export default function SearchForm(props) {
+
+const handlechanges = event => {
+      props.setQuery(event.target.value);
+  }
+
+  
+
   return (
-    <section className="search-form">
-     // Add a search form here
-    </section>
+
+    <StyleForm className="search-form">
+     <form>
+         <input 
+         onChange={handlechanges}
+         type="text"
+         name="character"
+         placeholders="Search"
+         />
+     </form>
+    </StyleForm>
   );
 }
